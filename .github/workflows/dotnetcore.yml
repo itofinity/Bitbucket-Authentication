@@ -28,4 +28,4 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: nupkg
-        path: /home/runner/work/Bitbucket-Authentication/Bitbucket-Authentication/src/Itofinity.Bitbucket.Authentication/bin/Debug/Itofnity.Bitbucket.Authentication.0.1.0-alpha.nupkg
+        path: /home/runner/work/Bitbucket-Authentication/Bitbucket-Authentication/src/Itofinity.Bitbucket.Authentication/bin/Debug/Itofnity.Bitbucket.Authentication.*.nupkg
