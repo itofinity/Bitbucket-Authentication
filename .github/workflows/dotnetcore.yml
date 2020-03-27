@@ -35,3 +35,5 @@ jobs:
       with:
         name: Itofinity.Bitbucket.Authentication.${{ env.versionSemVer }}-${{ env.versionSuffixRoot }}-${{ env.buildNumber }}.nupkg.zip
         path: ./**/Itofinity.Bitbucket.Authentication*.*.nupkg
+    - name Push:
+      run: dotnet nuget push ./**/Itofinity.Bitbucket.Authentication*.*.nupkg --api-key ${{ secrets.MYGET_ITOFINITY_APIKEY }} -Source https://www.myget.org/F/itofinity/api/v2/package
