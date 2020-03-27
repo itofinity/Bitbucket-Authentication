@@ -26,6 +26,6 @@ jobs:
     - name: Pack
       run: dotnet pack
     - uses: actions/upload-artifact@v1
-        with:
-          name: nupkg
-          path: **/bin/**/*.nupkg
+      with:
+        name: nupkg
+        path: **/bin/**/*.nupkg
