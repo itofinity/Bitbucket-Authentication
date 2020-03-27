@@ -28,13 +28,13 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore --version-suffix ${{ env.version }}
+      run: dotnet build --configuration Release --no-restore --version-suffix ${{ emv.versionSemVer }}-${{ env.versionSuffixRoot }}-${{ env.buildNumber }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
-      run: dotnet pack /p:PackageVersion=${{ env.version }}
+      run: dotnet pack /p:PackageVersion=${{ emv.versionSemVer }}-${{ env.versionSuffixRoot }}-${{ env.buildNumber }}
     - name: Upload
       uses: actions/upload-artifact@v2-preview 
       with:
-        name: Itofinity.Bitbucket.Authentication.${{ env.version }}.nupkg.zip
+        name: Itofinity.Bitbucket.Authentication.${{ emv.versionSemVer }}-${{ env.versionSuffixRoot }}-${{ env.buildNumber }}.nupkg.zip
         path: ./**/Itofinity.Bitbucket.Authentication*.*.nupkg
