@@ -25,7 +25,7 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
       run: dotnet pack
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2-preview 
       with:
         name: nupkg
-        path: /home/runner/work/Bitbucket-Authentication/Bitbucket-Authentication/src/Itofinity.Bitbucket.Authentication/bin/Debug/Itofnity.Bitbucket.Authentication.*.nupkg
+        path: ./**/Itofnity.Bitbucket.Authentication.*.nupkg
