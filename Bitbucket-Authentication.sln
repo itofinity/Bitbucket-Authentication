@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1F2CD5FC-048C-4639-B8C0-A858542E38B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itofnity.Bitbucket.Authentication", "src\Itofinity.Bitbucket.Authentication\Itofnity.Bitbucket.Authentication.csproj", "{B40A87BC-AC2E-41D9-A2C3-5071CA380602}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itofinity.Bitbucket.Authentication", "src\Itofinity.Bitbucket.Authentication\Itofinity.Bitbucket.Authentication.csproj", "{B40A87BC-AC2E-41D9-A2C3-5071CA380602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
