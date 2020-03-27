@@ -10,9 +10,6 @@ env:
   versionSemVer: "0.1.0"
   versionSuffixRoot: "ci"
   buildNumber: ${{ github.run_number }}
-  versionSuffix: ${{ env.versionSuffixRoot }}-${{ env.buildNumber }}
-  versionPrefix: ${{ emv.versionSemVer }}
-  version: ${{ env.versionPrefix }}-${{ env.versionSuffix }}
 
 jobs:
   build:
