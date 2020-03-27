@@ -31,5 +31,5 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2-preview 
       with:
-        name: Itofinity.Bitbucket.Authentication.x.x.x-{{ env.buildNumber }}.nupkg.zip
+        name: Itofinity.Bitbucket.Authentication.x.x.x-${{ env.buildNumber }}.nupkg.zip
         path: ./**/Itofinity.Bitbucket.Authentication*.*.nupkg
