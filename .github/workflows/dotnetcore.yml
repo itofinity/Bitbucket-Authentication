@@ -7,7 +7,12 @@ on:
     branches: [ master ]
 
 env:
-  buildNumber: ${{ github.run_id }}-${{ github.run_number }}
+  versionSemVer: "0.1.0"
+  versionSuffixRoot: "ci"
+  buildNumber: ${{ github.run_number }}
+  versionSuffix: ${{ env.versionSuffixRoot }}-${{ env.buildNumber }}
+  versionPrefix: ${{ emv.versionSemVer }}
+  version: ${{ env.versionPrefix }}-${{ env.versionSuffix }}
 
 jobs:
   build:
@@ -23,13 +28,13 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore --version-suffix ${{ env.version }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
-      run: dotnet pack
+      run: dotnet pack /p:PackageVersion=${{ env.version }}
     - name: Upload
       uses: actions/upload-artifact@v2-preview 
       with:
-        name: Itofinity.Bitbucket.Authentication.x.x.x-${{ env.buildNumber }}.nupkg.zip
+        name: Itofinity.Bitbucket.Authentication.${{ env.version }}.nupkg.zip
         path: ./**/Itofinity.Bitbucket.Authentication*.*.nupkg

@@ -4,11 +4,10 @@
     <Company>Itofinity</Company>
     <Copyright>Copyright © 2020</Copyright>
     <Description>Library of helper code for dealing with Bitbucket authentication</Description>
-
-    <VersionMajor>0</VersionMajor>
-    <VersionMinor>1</VersionMinor>
-    <VersionPrefix>$(VersionMajor).$(VersionMinor)</VersionPrefix>
-    <VersionSuffix>alpha</VersionSuffix>
+    
+    <!-- overridden by CI --> 
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>snapshot</VersionSuffix>
 
     <AssemblyTitle>Debug Build ($(TargetFramework)), ($(TargetFrameworkIdentifier))</AssemblyTitle>
   </PropertyGroup>
