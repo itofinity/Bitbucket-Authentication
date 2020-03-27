@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <Product> Bitbucket-Authentication</Product>
+    <Company>Itofinity</Company>
+    <Copyright>Copyright © 2020</Copyright>
+    <Description>Library of helper code for dealing with Bitbucket authentication</Description>
+
+    <VersionMajor>0</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+    <VersionPrefix>$(VersionMajor).$(VersionMinor)</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+
+    <AssemblyTitle>Debug Build ($(TargetFramework)), ($(TargetFrameworkIdentifier))</AssemblyTitle>
+  </PropertyGroup>
+</Project>
